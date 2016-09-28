@@ -1,0 +1,27 @@
+{
+  "Success": true,
+  "Message": "success",
+  "StatusCode": 200,
+  "IsError": false,
+  "IgnoreLocalCache": true,
+  "Data": [
+    {
+      "title": "Plan",
+      "widget": null,
+      "description": "",
+      "roles": ""
+    },
+    {
+      "title": "Workbench",
+      "widget": null,
+      "description": "",
+      "roles": ""
+    },
+    {
+      "title": "Admin",
+      "widget": null,
+      "description": "",
+      "roles": ""
+    }
+  ]
+}

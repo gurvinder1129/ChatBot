@@ -1,0 +1,103 @@
+//
+// TC Custom Styles for CEBDropdown
+// --------------------------------------------------
+
+
+// cebdropdown wrapper utlilizes http://davidstutz.github.io/bootstrap-multiselect/ to create an accessible dropdown
+
+.ceb-dropdown-container {
+	display: block;
+	.ceb-dropdown {
+		border-radius : $input-border-radius;
+		padding-right: 25px;
+		text-align: left;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		&:after {
+			content: "\e644";
+			font-family: 'shl-icon-font';
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			position: absolute;
+			right: 10px;
+			color: $brand-primary;
+			margin-top: 3px;
+		}
+	}
+	.dropdown-menu {
+		width: auto;
+		min-width: 200px;
+		max-width: 350px;
+		margin-top : -1px;
+		
+		> li > a.dropdown-item {
+			padding-top: 2px;
+			padding-bottom: 2px;
+			padding-right: 25px;
+			white-space: nowrap;
+			.radio, .checkbox {
+				cursor: pointer;
+				> input {
+					margin-right: 5px;
+					position: relative;
+					top: 2px;
+				}
+			}
+			&:hover, &:focus, &:active {
+				background: $brand-primary;
+				color: $ceb-dropdown-hover-color;
+			}
+			
+			> label {
+				padding-left: 35px;
+			}
+		}
+		> li.active > a {
+			background: transparent;
+			color: inherit;
+		}
+		li > a.multiselect-clear-filter {
+			color: $brand-primary;
+			background: none;
+			padding-left: 15px;
+			margin-top: 10px;
+			margin-bottom: 5px;
+			text-decoration: underline;
+			&:hover, &:focus, &:active {
+				background: none;
+			}
+		}
+		> li.multiselect-item.filter {
+			padding-left: 10px;
+			padding-right: 5px;
+			padding-top: 10px;
+			&:before {
+				content: "\e60a";
+				font-family: 'shl-icon-font';
+				speak: none;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				-webkit-font-smoothing: antialiased;
+				color: $brand-secondary;
+				position: absolute;
+				top: 20px;
+				left: 16px;
+			}
+			
+			> input.multiselect-search {
+				padding-left: 25px;
+				padding-top: 7px;
+				padding-right: 10px;
+			}
+		}
+	}
+}

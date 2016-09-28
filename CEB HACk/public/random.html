@@ -1,0 +1,22 @@
+<div>	
+<center>
+		<h3 id="num"></h3>
+</center>
+
+</div>
+
+<script>
+var min=1;
+var max=100;
+var no=0;
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+setTimeout(function() {
+		no = getRandomInt(min,max);
+}, 1000);
+
+var element = document.getElementById('num');
+element.innerHTML = element.innerHTML + 'Random No: '+no+'   ';
+
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquerycallback</title>
+</head>
+<body>
+<div class="widget clearfix">
+<h3 class="widget-title">Our Partners</h3>
+<div id="ads-content" class="clearfix">
+</div>
+</div>
+	
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+<script src = "../ceb/plugin/jquery.adsRotator.js"></script>
+<script>
+$(document).ready(function() {
+	'use strict';
+	
+	$('#ads-content')
+		.adsRotator({
+			num_displayed: 3,
+			ads_sources : function() {
+				var my_ads = ['random', 'random', 'random', 'random', 'random'];
+				
+				// do all kinds of craziness here, or just reverse the array
+				my_ads.reverse();
+								
+				return my_ads;
+			},
+			onAdLoaded : function (idx, num_displayed) {
+				console.log('Loaded ad : ' + idx);
+				
+				if (num_displayed - 1 === idx) {
+					console.log('That was the last ad!  Whee!');
+				}
+			}
+		});
+});
+</script>
+</body>
+</html>

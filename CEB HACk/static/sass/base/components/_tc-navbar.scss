@@ -1,0 +1,27 @@
+//
+// TC Custom Styles for Navbar Header
+// --------------------------------------------------
+
+
+.tc-navbar .tc-welcome-wrap {position: absolute; top: 0px;}
+.tc-navbar .navbar-form {padding-right: 10px;}
+.tc-navbar .badge {
+	left: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    top: -4px;
+}
+
+/* Menu CSS */
+.topbar .nav-list > li {
+	float: left;
+	display: block;
+}
+.topbar .nav-list > li > a {padding: 1.5px 40px 4.5px 15px}
+
+/* Dropdown Header CSS */
+.dropdown-menu-header {
+	padding-left: 10px;
+	padding-top: 10px;
+}

@@ -1,0 +1,111 @@
+//
+// Progressbars
+// --------------------------------------------------
+
+.progress{
+	@include box-shadow(none);
+
+	margin-bottom: 10px;
+	
+	height: 20px;
+
+	.progress-bar{
+		@include box-shadow(none);
+		line-height: 20px;
+	}
+
+	&[data-percent]{
+		position: relative;
+		&:after{
+			display: inline-block;
+			content: attr(data-percent);
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 2px;
+			bottom: 0;
+
+			line-height: 16px;
+
+			text-align: center;
+			font-size: 13px;
+			font-family: $font-family-base;
+		}
+	}
+	&.progress-lg{
+	    height:30px;    
+	    .progress-bar {
+			line-height: 28px;
+			font-size: 25px;
+		}
+		.progress-bar-danger {
+			line-height: 28px;
+			font-size: 25px;
+		}
+		.progress-bar-warning {
+			line-height: 28px;
+			font-size: 25px;
+		}
+		.progress-bar-success {
+			line-height: 28px;
+			font-size: 25px;
+		}
+		&[data-percent]:after {
+		    padding-top:3px;
+			line-height: 20px;
+			font-size: 14px;
+			vertical-align: center;
+		}
+
+ 	}
+ 	&.progress-small {
+		height: 12px;
+		.progress-bar {
+			line-height: 10px;
+			font-size: 11px;
+		}
+		&[data-percent]:after {
+			line-height: 10px;
+			font-size: 11px;
+		}
+	}
+
+
+ 	&.progress-mini {
+		height: 9px;
+		.progress-bar {
+			line-height: 8px;
+			font-size: 11px;
+		}
+		&[data-percent]:after {
+			line-height: 8px;
+			font-size: 11px;
+		}
+ 	}
+
+}
+
+.progress-bar-fav{
+	@include progress-bar-variant($brand-primary);
+	height:30px;
+}
+
+.progress-fav{
+  	background: $ceb-light-blue;
+}
+
+.progress {
+  	position: relative;
+}
+
+.progress:before {
+	display: inline-block;
+	content: "";
+	  
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	 
+}

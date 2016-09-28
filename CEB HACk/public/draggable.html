@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul {
+  border: solid 1px green;
+  padding: 5px;
+  height: 120px;
+}
+
+.hover {
+  background-color: #CFC;
+}
+	</style>
+</head>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js"></script>
+
+
+
+<div id="counter_text"></div>
+
+<ul id="listbox1">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+  <li>Item 5</li>
+</ul>
+
+<ul id="listbox2">
+</ul>
+<script type="text/javascript">
+	var counter = 0;
+$('#counter_text').text(counter);    
+
+$('#listbox1 li').draggable({
+  stop: function(event, ui) {
+    $(this).css('left',0);
+    $(this).css('top',0);
+  }
+});
+
+$("#listbox2").droppable({
+  drop: function(event, ui) {
+    $(this).append(ui.draggable);
+    if (counter <= 3) {
+      counter++;
+      $('#counter_text').text(counter);
+    }
+    if (counter === 3) {
+      $('#listbox2').droppable("disable");
+      $('#listbox1 li').draggable("disable");
+    }
+  },
+  hoverClass: 'hover'
+});
+
+$("#listbox1").droppable({
+  drop: function(event, ui) {
+    counter--;
+    if (counter<3) {
+      $("li").draggable("enable");  
+      $('#listbox2').droppable("enable");
+    }
+    $('#counter_text').text(counter);    
+    $(this).append(ui.draggable);
+    $(ui.draggable).draggable('enable');
+  },
+  hoverClass: 'hover'
+});
+</script>
+<body>
+</html>

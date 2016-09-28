@@ -1,0 +1,50 @@
+//
+// Basics
+// --------------------------------------------------
+
+a{
+	&:hover{
+		text-decoration:none;
+	}
+}
+
+.clearfix{
+	line-height: 0;
+}
+
+ul{
+	padding-left:15px;
+}
+
+.page-header{
+	padding-bottom: 8px;
+	margin:8px 0;
+	border:none;
+}
+.page-title{
+	display: inline-block;
+	color: $brand-primary;
+	margin-top:0;
+	margin-bottom:0;
+}
+
+.section-header{
+	padding-bottom: 5px;
+	margin: 5px 0;
+	border: none;
+}
+.section-title{
+	display: inline-block;
+	color: $brand-secondary;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.header-action{
+	display:inline-block;
+	position:relative;
+	float:right;
+}
+
+
+

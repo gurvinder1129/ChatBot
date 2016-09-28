@@ -1,0 +1,39 @@
+// Core variables and mixins
+@import "../../base/_variables.scss";
+
+///////////////////
+//Reset Variables
+@import "_variables-ui-doc.scss";
+///////////////////
+
+// Bootstrap
+@import "../../base/bootstrap-3.2.0/bootstrap.scss"; //Glyphicons is removed from bootstrap
+
+// Font
+@import "../../base/_font.scss";
+
+// Mixins
+@import "../../base/mixins/mixins.scss"; //Buttons mixins
+
+//Utilities Classes
+@import "../../base/_utilities.scss"; //Utility
+
+// Components
+@import "../../base/components/components.scss"; //Components
+
+// Plugins
+@import "../../base/plugins/plugins.scss"; //Plugins
+
+// Widgets
+@import "../../base/widgets/widgets.scss"; //Conference Accordion
+
+// Sections
+@import "../../base/sections/sections.scss"; //Sections
+
+// Pages
+@import "../../base/pages/pages.scss"; //Pages
+
+///////////////////
+// Branding Specific Modify
+@import "_modify-ui-doc.scss"; //Modification for branding specific theme
+///////////////////

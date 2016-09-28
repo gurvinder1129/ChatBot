@@ -1,0 +1,55 @@
+//
+// Buttons
+// --------------------------------------------------
+.btn{
+    font-family:$btn-font;
+    font-weight:$btn-font-weight;
+    @include button-size($padding-base-vertical + 1, $padding-base-horizontal, $font-size-base, 20px, $border-radius-btn);
+}
+
+// Outline Buttons
+// --------------------------------------------------
+.btn-default{
+    @include outline-button-variant($outline-default-color, $outline-default-bg, $outline-default-border, $outline-default-hover-color, $outline-default-hover-bg, $outline-default-hover-border);
+}
+.btn-primary {
+    @include outline-button-variant($outline-primary-color, $outline-primary-bg, $outline-primary-border, $outline-primary-hover-color, $outline-primary-hover-bg, $outline-primary-hover-border);
+}
+
+.btn-success {
+    @include outline-button-variant($outline-success-color, $outline-success-bg, $outline-success-border, $outline-success-hover-color, $outline-success-hover-bg, $outline-success-hover-border);
+}
+
+.btn-danger {
+    @include outline-button-variant($outline-danger-color, $outline-danger-bg, $outline-danger-border, $outline-danger-bg, $outline-danger-color, $outline-danger-border);
+}
+
+.btn-warning {
+    @include outline-button-variant($outline-warning-color, $outline-warning-bg, $outline-warning-border, $outline-warning-color, $outline-warning-bg, $outline-warning-border);
+}
+
+.btn-info {
+    @include outline-button-variant($outline-info-color, $outline-info-bg, $outline-info-border, $outline-info-color, $outline-info-bg, $outline-info-border);
+}
+
+.btn-secondary{
+    @include outline-button-variant($outline-secondary-color, $outline-secondary-bg, $outline-secondary-border, $outline-secondary-hover-color, $outline-secondary-hover-bg, $outline-secondary-hover-border);
+}
+
+.btn-select {
+    // line-height: ensure even-numbered height of button next to large input
+    @include button-size(3px, 10px, $font-size-base, $line-height-base, $border-radius-small);
+    margin-left:5px;
+}
+
+.btn-link{
+    color:$brand-primary;
+}
+
+.btn-blank {
+	background: none;
+	color: $brand-primary;
+	border: none;
+	&:hover, &:active {text-decoration: none;}
+}
+.btn-blank[disabled] {color: $btn-link-disabled-color;}

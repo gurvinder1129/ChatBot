@@ -1,0 +1,1048 @@
+// a flag to toggle asset pipeline / compass integration
+// defaults to true if twbs-font-path function is present (no function => twbs-font-path('') parsed as string == right side)
+// in Sass 3.3 this can be improved with: function-exists(twbs-font-path)
+$bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")')) !default;
+//
+// Variables
+// --------------------------------------------------
+
+
+//== Colors
+//
+
+
+// gemini menu
+$gemini-menu-background-color: white;
+$gemini-menu-active-size:30px;
+$gemini-menu-color:#8C64A8;
+$gemini-menu-size:14px;
+$gemini-menu-link:#499dc7;
+$gemini-menu-visit:#d7b0c1;
+$gemini-menu-hover:#e66bd5;
+$gemini-menu-active:#f2eaa6;
+
+
+//Color Palette
+$ceb-top-head-bg:       #F5F5F5;
+$ceb-top-head-text:     #545454;
+$ceb-menu:				black;
+
+
+$ceb-primary-blue:      #00aeef;
+$ceb-light-blue:        #7fd6f7;
+$ceb-dark-blue:         #0a3f6b;
+
+$ceb-link-blue:         #0073BD;
+
+$ceb-primary-gold:      #f4b213;
+$ceb-light-gold:        #f9d889;
+$ceb-dark-gold:         #aa5019;
+
+$ceb-primary-green:     #9cc84b;
+$ceb-light-green:       #cde3a5;
+$ceb-dark-green:        #416428;
+
+$ceb-primary-mint:      #2bc4b6;
+$ceb-light-mint:        #95e1da;
+$ceb-dark-mint:         #00566b;
+
+$ceb-primary-amethyst:  #8d64aa;
+$ceb-light-amethyst:    #c6b1d4;
+$ceb-dark-amethyst:     #46295b;
+
+$ceb-red:               #bb133e;
+
+$ceb-warm-gray-1:       #e4dfda;
+$ceb-warm-gray-2:       #c1bcbb;
+$ceb-warm-gray-3:       #928d89;
+$ceb-warm-gray-4:       #585250;
+
+$ceb-cool-gray-1:       #f2f2f2;
+$ceb-cool-gray-2:       #c4c4c4;
+$ceb-cool-gray-3:       #8a8a8c;
+$ceb-cool-gray-4:       #4d4d4f;
+
+//## Gray and brand colors for use across Bootstrap. (*Default Bootstrap grays*)
+
+$gray-darker:            lighten(#000, 13.5%) !default; // #222
+$gray-dark:              lighten(#000, 20%) !default;   // #333
+$gray:                   lighten(#000, 33.5%) !default; // #555
+$gray-light:             lighten(#000, 46.7%) !default; // #777
+$gray-lighter:           lighten(#000, 93.5%) !default; // #eee
+
+//** Branding Colors
+
+$brand-primary:         $ceb-primary-blue;
+$brand-success:         $ceb-primary-green;
+$brand-info:            $ceb-primary-amethyst;
+$brand-warning:         $ceb-primary-gold;
+$brand-danger:          $ceb-red;
+
+$brand-secondary:       $ceb-primary-mint;
+$brand-accent:          $ceb-primary-gold;
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               white;
+//** Global text color on `<body>`.
+$text-color:            $ceb-cool-gray-4;
+
+//** Border Color
+$border-color:          $ceb-warm-gray-1;
+
+//** Global textual link color.
+$link-color:            $ceb-link-blue;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      $ceb-dark-blue;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:   "Proxima Nova Regular", Arial, Helvetica, sans-serif;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:        $font-family-sans-serif !default;
+
+$font-size-base:          14px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            30px; 
+$font-size-h2:            24px; 
+$font-size-h3:            22px; 
+$font-size-h4:            20px; 
+$font-size-h5:            18px;
+$font-size-h6:            16px; 
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1.428571429 !default; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family:    "Proxima Nova SemiBold", Arial, Helvetica, sans-serif;
+$headings-font-weight:    500 !default;
+$headings-line-height:    1.1 !default;
+$headings-color:          inherit !default;
+
+$page-headings-font:      "Proxima Nova Bold", Arial, Helvetica, sans-serif;
+
+
+
+//== Iconography
+//
+//## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
+
+//** Load fonts from this directory.
+$icon-font-path: "bootstrap/" !default;
+//** File name for all font files.
+$icon-font-name:          "glyphicons-halflings-regular" !default;
+//** Element ID within SVG icon file.
+$icon-font-svg-id:        "glyphicons_halflingsregular" !default;
+
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+$padding-base-vertical:     6px !default;
+$padding-base-horizontal:   12px !default;
+
+$padding-large-vertical:    10px !default;
+$padding-large-horizontal:  16px !default;
+
+$padding-small-vertical:    5px !default;
+$padding-small-horizontal:  10px !default;
+
+$padding-xs-vertical:       1px !default;
+$padding-xs-horizontal:     5px !default;
+
+$line-height-large:         1.33 !default;
+$line-height-small:         1.5 !default;
+
+$border-radius-base:        4px;
+$border-radius-large:       6px !default;
+$border-radius-small:       3px !default;
+
+//** Global color for active items (e.g., navs or dropdowns).
+$component-active-color:    #fff !default;
+//** Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg:       $brand-primary !default;
+
+//** Width of the `border` for generating carets that indicator dropdowns.
+$caret-width-base:          4px !default;
+//** Carets increase slightly in size for larger components.
+$caret-width-large:         5px !default;
+
+
+//== Tables
+//
+//## Customizes the `.table` component with basic values, each used across all table variations.
+
+//** Padding for `<th>`s and `<td>`s.
+$table-cell-padding:            8px !default;
+//** Padding for cells in `.table-condensed`.
+$table-condensed-cell-padding:  5px !default;
+
+//** Default background color used for all tables.
+$table-bg:                      transparent !default;
+//** Background color used for `.table-striped`.
+$table-bg-accent:               $ceb-cool-gray-1;
+//** Background color used for `.table-hover`.
+$table-bg-hover:                $ceb-warm-gray-1;
+$table-bg-active:               $table-bg-hover !default;
+
+//** Border color for table and cell borders.
+$table-border-color:            $border-color;
+
+//** Tablewrap
+$table-wrap-top-border: 3px solid $brand-primary;
+
+//** Datatables
+$datatables-border: 1px solid $border-color;
+$datatables-sorting-both-icon: url("../../../images/datatables/sort_both.png") no-repeat center right;
+$datatables-sorting-asc-icon: url("../../../images/datatables/sort_asc.png") no-repeat center right;
+$datatables-sorting-desc-icon: url("../../../images/datatables/sort_desc.png") no-repeat center right;
+$datatables-sorting-asc-disabled-icon: url("../../../images/datatables/sort_asc_disabled.png") no-repeat center right;
+$datatables-sorting-desc-disabled-icon: url("../../../images/datatables/sort_desc_disabled.png") no-repeat center right;
+$datatables-cell-bg: white;
+$datatables-cell-selected-bg: $ceb-primary-gold;
+$datatables-strip-cell-bg: $ceb-cool-gray-1;
+$datatables-cell-hover-bg: $ceb-light-blue;
+$datatables-sorting-highlight-bg: $ceb-light-mint;
+$datatables-sorting-highlight-bg1: $ceb-light-gold;
+
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+$btn-font:                       $headings-font-family;
+$btn-font-weight:                normal;
+$border-radius-btn:              $border-radius-small;
+
+$btn-primary-color:              white;
+$btn-primary-bg:                 $brand-primary;
+$btn-primary-border:             $brand-primary;
+
+$btn-success-color:              white;
+$btn-success-bg:                 $brand-success;
+$btn-success-border:             $brand-success;
+
+$btn-info-color:                 white;
+$btn-info-bg:                    $brand-info;
+$btn-info-border:                $brand-info;
+
+$btn-warning-color:              white;
+$btn-warning-bg:                 $brand-warning;
+$btn-warning-border:             $brand-warning;
+
+$btn-danger-color:               white;
+$btn-danger-bg:                  $brand-danger;
+$btn-danger-border:              $brand-danger;
+
+$btn-link-disabled-color:        $ceb-cool-gray-3;
+
+$outline-default-color:          $text-color;
+$outline-default-bg:             white;
+$outline-default-border:         1px solid $border-color;
+$outline-default-hover-color:    $ceb-dark-blue;
+$outline-default-hover-bg:       $ceb-light-blue;
+$outline-default-hover-border:   $ceb-light-blue;
+
+$outline-primary-color:          white;
+$outline-primary-bg:             $brand-primary;
+$outline-primary-border:         $brand-primary;
+$outline-primary-hover-color:    $ceb-dark-blue;
+$outline-primary-hover-bg:       $ceb-light-blue;
+$outline-primary-hover-border:   $ceb-light-blue;
+
+$outline-success-color:          white;
+$outline-success-bg:             $brand-success;
+$outline-success-border:         $brand-success;
+$outline-success-hover-color:    $ceb-dark-green;
+$outline-success-hover-bg:       $ceb-light-green;
+$outline-success-hover-border:   $ceb-light-green;
+
+$outline-danger-color:           white;
+$outline-danger-bg:              $brand-danger;
+$outline-danger-border:          $brand-danger;
+$outline-danger-hover-color:     white;
+$outline-danger-hover-bg:        $brand-danger;
+$outline-danger-hover-border:    $brand-danger;
+
+$outline-warning-color:          white;
+$outline-warning-bg:             $brand-warning;
+$outline-warning-border:         $brand-warning;
+$outline-warning-hover-color:    white;
+$outline-warning-hover-bg:       $brand-warning;
+$outline-warning-hover-border:   $brand-warning;
+
+$outline-info-color:             white;
+$outline-info-bg:                $brand-info;
+$outline-info-border:            $brand-info;
+$outline-info-hover-color:       $ceb-dark-amethyst;
+$outline-info-hover-bg:          $ceb-light-amethyst;
+$outline-info-hover-border:      $ceb-light-amethyst;
+
+$outline-secondary-color:        white;
+$outline-secondary-bg:           $brand-secondary;
+$outline-secondary-border:       $brand-secondary;
+$outline-secondary-hover-color:        white;
+$outline-secondary-hover-bg:           $brand-secondary;
+$outline-secondary-hover-border:       $brand-secondary; 
+
+
+$outline-primary-pagination-border: 1px solid $brand-secondary;
+//== Forms
+//
+//##
+
+//** `<input>` background color
+$input-bg:                       white;
+//** `<input disabled>` background color
+$input-bg-disabled:              $ceb-cool-gray-1;
+
+//** Text color for `<input>`s
+$input-color:                    $ceb-warm-gray-4;
+//** `<input>` border color
+$input-border:                   $border-color;
+//** `<input>` border radius
+$input-border-radius:            $border-radius-base;
+//** Border color for inputs on focus
+$input-border-focus:             $brand-primary;
+
+//** Placeholder text color
+$input-color-placeholder:        $ceb-cool-gray-2;
+
+//** Default `.form-control` height
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+//** Large `.form-control` height
+$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
+//** Small `.form-control` height
+$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+
+$legend-color:                   $text-color;
+$legend-border-color:            $border-color;
+
+//** Background color for textual input addons
+$input-group-addon-bg:           $ceb-cool-gray-1;
+//** Border color for textual input addons
+$input-group-addon-border-color: $border-color;
+
+$form-group-margin-bottom:       15px;
+
+$help-block-color:               $ceb-cool-gray-3;
+
+
+//== Dropdowns
+//
+//## Dropdown menu container and contents.
+
+//** Background for the dropdown menu.
+$dropdown-bg:                    white;
+//** Dropdown menu `border-color`.
+$dropdown-border:                $border-color;
+//** Dropdown menu `border-color` **for IE8**.
+$dropdown-fallback-border:       $border-color;
+//** Divider color for between dropdown items.
+$dropdown-divider-bg:            $border-color;
+
+$dropdown-border-radius:         $border-radius-base;
+
+//** Dropdown link text color.
+$dropdown-link-color:            $ceb-cool-gray-4;
+//** Hover color for dropdown links.
+$dropdown-link-hover-color:      $brand-primary;
+//** Hover background for dropdown links.
+$dropdown-link-hover-bg:         white;
+
+//** Active dropdown menu item text color.
+$dropdown-link-active-color:     $component-active-color !default;
+//** Active dropdown menu item background color.
+$dropdown-link-active-bg:        $component-active-bg !default;
+
+//** Disabled dropdown menu item background color.
+$dropdown-link-disabled-color:   $btn-link-disabled-color;
+
+//** Text color for headers within dropdown menus.
+$dropdown-header-color:          $ceb-warm-gray-4;
+
+//** Deprecated `$dropdown-caret-color` as of v3.1.0
+$dropdown-caret-color:           $ceb-cool-gray-4;
+
+$ceb-dropdown-hover-color:       white !default;
+
+//-- Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+//
+// Note: These variables are not generated into the Customizer.
+
+$zindex-navbar:            1000 !default;
+$zindex-dropdown:          1000 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+$zindex-navbar-fixed:      1030 !default;
+$zindex-modal-background:  1040 !default;
+$zindex-modal:             1050 !default;
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns:              12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         30px !default;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-sm-min !default;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+$container-tablet:             ((720px + $grid-gutter-width)) !default;
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet !default;
+
+// Medium screen / desktop
+$container-desktop:            ((940px + $grid-gutter-width)) !default;
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop !default;
+
+// Large screen / wide desktop
+$container-large-desktop:      ((1140px + $grid-gutter-width)) !default;
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop !default;
+
+
+
+//== General
+//
+//##
+$section-heading-border:      none;
+
+
+//== Navbar
+//
+//##
+
+// Basics of a navbar
+$navbar-height:                    50px !default;
+$navbar-margin-bottom:             $line-height-computed !default;
+$navbar-border-radius:             $border-radius-base !default;
+$navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
+$navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
+$navbar-collapse-max-height:       340px !default;
+
+$nav-logo-path:              	   url('../../../images/logo/logo_rgb_230.png');          
+
+$navbar-default-color:             $brand-primary;
+$navbar-default-bg:                $ceb-top-head-bg;
+$navbar-default-border:            transparent;
+
+// Navbar links
+$navbar-default-link-color:                $ceb-cool-gray-4;
+$navbar-default-link-hover-color:          $ceb-top-head-text;
+$navbar-default-link-hover-bg:             transparent;
+$navbar-default-link-active-color:         $ceb-top-head-text;
+$navbar-default-link-active-bg:            transparent;
+$navbar-default-link-disabled-color:       $btn-link-disabled-color;
+$navbar-default-link-disabled-bg:          transparent;
+
+// Navbar brand label
+$navbar-default-brand-color:               $navbar-default-link-color !default;
+$navbar-default-brand-hover-color:         $brand-accent;
+$navbar-default-brand-hover-bg:            transparent;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg:           $brand-primary;
+$navbar-default-toggle-icon-bar-bg:        $brand-accent;
+$navbar-default-toggle-border-color:       $brand-primary;
+
+
+// Inverted navbar
+// Reset inverted navbar basics
+$navbar-inverse-color:                      $gray-light !default;
+$navbar-inverse-bg:                         #222 !default;
+$navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !default;
+
+// Inverted navbar links
+$navbar-inverse-link-color:                 $gray-light !default;
+$navbar-inverse-link-hover-color:           #fff !default;
+$navbar-inverse-link-hover-bg:              transparent !default;
+$navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
+$navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%) !default;
+$navbar-inverse-link-disabled-color:        #444 !default;
+$navbar-inverse-link-disabled-bg:           transparent !default;
+
+// Inverted navbar brand label
+$navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
+$navbar-inverse-brand-hover-color:          #fff !default;
+$navbar-inverse-brand-hover-bg:             transparent !default;
+
+// Inverted navbar toggle
+$navbar-inverse-toggle-hover-bg:            #333 !default;
+$navbar-inverse-toggle-icon-bar-bg:         #fff !default;
+$navbar-inverse-toggle-border-color:        #333 !default;
+
+
+//== Navs
+//
+//##
+
+//=== Shared nav styles
+$nav-link-padding:                          10px 15px !default;
+$nav-link-hover-bg:                         transparent;
+
+$nav-disabled-link-color:                   $btn-link-disabled-color;
+$nav-disabled-link-hover-color:             $ceb-cool-gray-1;
+
+$nav-open-link-hover-color:                 #fff !default;
+
+//== Tabs
+$nav-tabs-border-color:                     transparent;
+
+$nav-tabs-link-hover-border-color:          $border-color;
+
+$nav-tabs-active-link-hover-bg:             transparent;
+$nav-tabs-active-link-hover-color:          $ceb-cool-gray-1;
+$nav-tabs-active-link-hover-border-color:   $border-color;
+
+$nav-tabs-justified-link-border-color:            $border-color;
+$nav-tabs-justified-active-link-border-color:     $body-bg !default;
+
+//== Pills
+$nav-pills-border-radius:                   2px;
+$nav-pills-active-link-hover-bg:            $component-active-bg !default;
+$nav-pills-active-link-hover-color:         $component-active-color !default;
+
+
+//== Pagination
+//
+//##
+
+$pagination-color:                     $link-color !default;
+$pagination-bg:                        white;
+$pagination-border:                    $border-color;
+
+$pagination-hover-color:               white;
+$pagination-hover-bg:                  $brand-primary;
+$pagination-hover-border:              $brand-primary;
+
+$pagination-active-color:              white;
+$pagination-active-bg:                 $brand-primary !default;
+$pagination-active-border:             $brand-primary !default;
+
+$pagination-disabled-color:            $btn-link-disabled-color;
+$pagination-disabled-bg:               $ceb-cool-gray-1;
+$pagination-disabled-border:           $border-color;
+
+
+//== Pager
+//
+//##
+
+$pager-bg:                             $pagination-bg !default;
+$pager-border:                         $pagination-border !default;
+$pager-border-radius:                  15px !default;
+
+$pager-hover-bg:                       $pagination-hover-bg !default;
+
+$pager-active-bg:                      $pagination-active-bg !default;
+$pager-active-color:                   $pagination-active-color !default;
+
+$pager-disabled-color:                 $pagination-disabled-color !default;
+
+
+//== Jumbotron
+//
+//##
+
+$jumbotron-padding:              30px !default;
+$jumbotron-color:                inherit !default;
+$jumbotron-bg:                   $ceb-cool-gray-1;
+$jumbotron-heading-color:        inherit !default;
+$jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
+
+
+//== Form states and alerts
+//
+//## Define colors for form feedback states and, by default, alerts.
+
+$state-success-text:             $ceb-primary-green;
+$state-success-bg:               $ceb-light-green;
+$state-success-border:           $ceb-light-green;
+
+$state-info-text:                $ceb-primary-amethyst;
+$state-info-bg:                  $ceb-light-amethyst;
+$state-info-border:              $ceb-light-amethyst;
+
+$state-warning-text:             $ceb-primary-gold;
+$state-warning-bg:               $ceb-cool-gray-1;
+$state-warning-border:           $ceb-cool-gray-1;
+
+$state-danger-text:              $ceb-dark-gold;
+$state-danger-bg:                $ceb-light-gold;
+$state-danger-border:            $ceb-light-gold;
+
+
+//== Tooltips
+//
+//##
+
+//** Tooltip max width
+$tooltip-max-width:           200px !default;
+//** Tooltip text color
+$tooltip-color:               #fff !default;
+//** Tooltip background color
+$tooltip-bg:                  #000 !default;
+$tooltip-opacity:             .9 !default;
+
+//** Tooltip arrow width
+$tooltip-arrow-width:         5px !default;
+//** Tooltip arrow color
+$tooltip-arrow-color:         $tooltip-bg !default;
+
+
+//== Popovers
+//
+//##
+
+//** Popover body background color
+$popover-bg:                          white;
+//** Popover maximum width
+$popover-max-width:                   276px !default;
+//** Popover border color
+$popover-border-color:                $border-color;
+//** Popover fallback border color
+$popover-fallback-border-color:       $border-color;
+
+//** Popover title background color
+$popover-title-bg:                    $ceb-cool-gray-1;
+
+//** Popover arrow width
+$popover-arrow-width:                 10px !default;
+//** Popover arrow color
+$popover-arrow-color:                 $popover-bg;
+
+//** Popover outer arrow width
+$popover-arrow-outer-width:           ($popover-arrow-width + 1) !default;
+//** Popover outer arrow color
+$popover-arrow-outer-color:           fade_in($popover-border-color, 0.05) !default;
+//** Popover outer arrow fallback color
+$popover-arrow-outer-fallback-color:  darken($popover-fallback-border-color, 20%) !default;
+
+
+//== Labels
+//
+//##
+
+//** Default label background color
+$label-default-bg:            $gray-light !default;
+//** Primary label background color
+$label-primary-bg:            $brand-primary !default;
+//** Success label background color
+$label-success-bg:            $brand-success !default;
+//** Info label background color
+$label-info-bg:               $brand-info !default;
+//** Warning label background color
+$label-warning-bg:            $brand-warning !default;
+//** Danger label background color
+$label-danger-bg:             $brand-danger !default;
+
+//** Default label text color
+$label-color:                 #fff !default;
+//** Default text color of a linked label
+$label-link-hover-color:      #fff !default;
+
+
+//== Modals
+//
+//##
+
+//** Padding applied to the modal body
+$modal-inner-padding:         15px !default;
+
+//** Padding applied to the modal title
+$modal-title-padding:         15px !default;
+//** Modal title line-height
+$modal-title-line-height:     $line-height-base !default;
+
+//** Background color of modal content area
+$modal-content-bg:                             white;
+//** Modal content border color
+$modal-content-border-color:                   $border-color;
+//** Modal content border color **for IE8**
+$modal-content-fallback-border-color:          $border-color;
+
+//** Modal backdrop background color
+$modal-backdrop-bg:           $ceb-cool-gray-4;
+//** Modal backdrop opacity
+$modal-backdrop-opacity:      .5 !default;
+//** Modal header border color
+$modal-header-border-color:   #e5e5e5 !default;
+//** Modal footer border color
+$modal-footer-border-color:   $modal-header-border-color !default;
+
+$modal-lg:                    900px !default;
+$modal-md:                    600px !default;
+$modal-sm:                    300px !default;
+
+
+//== Alerts
+//
+//## Define alert colors, border radius, and padding.
+
+$alert-padding:               15px !default;
+$alert-border-radius:         $border-radius-base !default;
+$alert-link-font-weight:      bold !default;
+
+$alert-success-bg:            $state-success-bg !default;
+$alert-success-text:          $state-success-text !default;
+$alert-success-border:        $state-success-border !default;
+
+$alert-info-bg:               $state-info-bg !default;
+$alert-info-text:             $state-info-text !default;
+$alert-info-border:           $state-info-border !default;
+
+$alert-warning-bg:            $state-warning-bg !default;
+$alert-warning-text:          $state-warning-text !default;
+$alert-warning-border:        $state-warning-border !default;
+
+$alert-danger-bg:             $state-danger-bg !default;
+$alert-danger-text:           $state-danger-text !default;
+$alert-danger-border:         $state-danger-border !default;
+
+
+//== Progress bars
+//
+//##
+
+//** Background color of the whole progress component
+$progress-bg:                 $ceb-warm-gray-1;
+//** Progress bar text color
+$progress-bar-color:          #fff !default;
+
+//** Default progress bar color
+$progress-bar-bg:             $brand-primary !default;
+//** Success progress bar color
+$progress-bar-success-bg:     $brand-success !default;
+//** Warning progress bar color
+$progress-bar-warning-bg:     $brand-warning !default;
+//** Danger progress bar color
+$progress-bar-danger-bg:      $brand-danger !default;
+//** Info progress bar color
+$progress-bar-info-bg:        $brand-info !default;
+
+
+//== List group
+//
+//##
+
+//** Background color on `.list-group-item`
+$list-group-bg:                 #fff !default;
+//** `.list-group-item` border color
+$list-group-border:             $border-color;
+//** List group border radius
+$list-group-border-radius:      $border-radius-base !default;
+
+//** Background color of single list items on hover
+$list-group-hover-bg:           white;
+//** Text color of active list items
+$list-group-active-color:       $component-active-color !default;
+//** Background color of active list items
+$list-group-active-bg:          $component-active-bg !default;
+//** Border color of active list elements
+$list-group-active-border:      $list-group-active-bg !default;
+//** Text color for content within active list items
+$list-group-active-text-color:  lighten($list-group-active-bg, 40%) !default;
+
+//** Text color of disabled list items
+$list-group-disabled-color:      $btn-link-disabled-color;
+//** Background color of disabled list items
+$list-group-disabled-bg:         $ceb-cool-gray-1;
+//** Text color for content within disabled list items
+$list-group-disabled-text-color: $list-group-disabled-color !default;
+
+$list-group-link-color:         $link-color;
+$list-group-link-hover-color:   $link-hover-color;
+$list-group-link-heading-color: $ceb-cool-gray-4;
+
+
+//== Panels
+//
+//##
+
+$panel-bg:                    white;
+$panel-body-padding:          15px !default;
+$panel-heading-padding:       9px 15px;
+$panel-heading-slim-padding:  8px 15px;
+$panel-footer-padding:        $panel-heading-padding !default;
+$panel-border-radius:         $border-radius-base;
+$panel-title-size:            $font-size-h6;
+
+//** Border color for elements within panels
+$panel-inner-border:          $border-color;
+$panel-footer-bg:             $ceb-cool-gray-1;
+
+$panel-default-text:          $text-color;
+$panel-default-border:        $border-color;
+$panel-default-heading-bg:    $ceb-cool-gray-1;
+
+$panel-primary-text:          white;
+$panel-primary-border:        $brand-primary !default;
+$panel-primary-heading-bg:    $brand-primary !default;
+
+$panel-success-text:          $state-success-text !default;
+$panel-success-border:        $state-success-border !default;
+$panel-success-heading-bg:    $state-success-bg !default;
+
+$panel-info-text:             $state-info-text !default;
+$panel-info-border:           $state-info-border !default;
+$panel-info-heading-bg:       $state-info-bg !default;
+
+$panel-warning-text:          $state-warning-text !default;
+$panel-warning-border:        $state-warning-border !default;
+$panel-warning-heading-bg:    $state-warning-bg !default;
+
+$panel-danger-text:           $state-danger-text !default;
+$panel-danger-border:         $state-danger-border !default;
+$panel-danger-heading-bg:     $state-danger-bg !default;
+
+$panel-filter-text:           $text-color !default;
+$panel-filter-border:         $border-color !default;
+$panel-filter-heading-bg:     $ceb-cool-gray-1;
+
+//** Customized Panel
+$panel-margin-top:            10px;
+$panel-heading-left-border:   3px solid $brand-primary;
+$panel-collapse-left-border:  3px solid $brand-accent;
+
+$panel-filter-top-border:     3px solid $brand-secondary;
+
+$panel-secondary-left-border: 3px solid $brand-secondary;
+$panel-secondary-collapse-border: 3px solid $brand-info;
+$panel-secondary-title:       14px;
+
+$context-content-color:       $brand-secondary;
+$context-content-margin:      15px;
+
+$tc-favorite-projects-panel-bg: white !default;
+
+//== Thumbnails
+//
+//##
+
+//** Padding around the thumbnail image
+$thumbnail-padding:           4px !default;
+//** Thumbnail background color
+$thumbnail-bg:                $body-bg !default;
+//** Thumbnail border color
+$thumbnail-border:            $border-color;
+//** Thumbnail border radius
+$thumbnail-border-radius:     $border-radius-base !default;
+
+//** Custom text color for thumbnail captions
+$thumbnail-caption-color:     $text-color !default;
+//** Padding around the thumbnail caption
+$thumbnail-caption-padding:   9px !default;
+
+
+//== Wells
+//
+//##
+
+$well-bg:                     $ceb-cool-gray-2;
+$well-border:                 $ceb-cool-gray-2;
+
+
+//== Badges
+//
+//##
+
+$badge-color:                 white;
+//** Linked badge text color on hover
+$badge-link-hover-color:      white;
+$badge-bg:                    $brand-warning;
+
+//** Badge text color in active nav link
+$badge-active-color:          $link-color !default;
+//** Badge background color in active nav link
+$badge-active-bg:             #fff !default;
+
+$badge-font-weight:           bold !default;
+$badge-line-height:           1 !default;
+$badge-border-radius:         10px !default;
+
+
+//== Breadcrumbs
+//
+//##
+
+$breadcrumb-padding-vertical:   8px !default;
+$breadcrumb-padding-horizontal: 15px !default;
+//** Breadcrumb background color
+$breadcrumb-bg:                 white;
+//** Breadcrumb text color
+$breadcrumb-color:              $ceb-cool-gray-3;
+//** Text color of current page in the breadcrumb
+$breadcrumb-active-color:       $brand-primary;
+//** Textual separator for between breadcrumb elements
+$breadcrumb-separator:          "/" !default;
+
+
+//== Carousel
+//
+//##
+
+$carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6) !default;
+
+$carousel-control-color:                      #fff !default;
+$carousel-control-width:                      15% !default;
+$carousel-control-opacity:                    .5 !default;
+$carousel-control-font-size:                  20px !default;
+
+$carousel-indicator-active-bg:                #fff !default;
+$carousel-indicator-border-color:             #fff !default;
+
+$carousel-caption-color:                      #fff !default;
+
+
+//== Close
+//
+//##
+
+$close-font-weight:           bold !default;
+$close-color:                 #000 !default;
+$close-text-shadow:           0 1px 0 #fff !default;
+
+
+//== Code
+//
+//##
+
+$code-color:                  #c7254e !default;
+$code-bg:                     #f9f2f4 !default;
+
+$kbd-color:                   #fff !default;
+$kbd-bg:                      #333 !default;
+
+$pre-bg:                      #f5f5f5 !default;
+$pre-color:                   $gray-dark !default;
+$pre-border-color:            #ccc !default;
+$pre-scrollable-max-height:   340px !default;
+
+
+//== Type
+//
+//##
+
+//** Horizontal offset for forms and lists.
+$component-offset-horizontal: 180px !default;
+//** Text muted color
+$text-muted:                  $gray-light !default;
+//** Abbreviations and acronyms border color
+$abbr-border-color:           $gray-light !default;
+//** Headings small color
+$headings-small-color:        $gray-light !default;
+//** Blockquote small color
+$blockquote-small-color:      $gray-light !default;
+//** Blockquote font size
+$blockquote-font-size:        ($font-size-base * 1.25) !default;
+//** Blockquote border color
+$blockquote-border-color:     $gray-lighter !default;
+//** Page header border color
+$page-header-border-color:    $gray-lighter !default;
+//** Width of horizontal description list titles
+$dl-horizontal-offset:        $component-offset-horizontal !default;
+//** Horizontal line color.
+$hr-border:                   $gray-lighter !default;
+
+//== Header, Navigation, Menu
+//
+//##
+$top-menu-bg:                 $brand-primary;
+$top-menu-color:              white;
+
+$top-menu-sticky-bg:          $brand-primary;
+$top-menu-sticky-color:       white;
+
+//== Jquery UI
+//
+//##
+$jquery-ui-widget-bg:         white;
+$jquery-ui-color:             $text-color;
+$jquery-ui-widget-border:     1px solid $border-color;
+
+//== Multiple Select
+//
+//##
+
+$select-box-height:           $input-height-base;  
+$select-box-border:           1px solid $input-border;
+$select-box-color:            $input-color-placeholder;
+
+//== Date Picker
+//
+//##
+$date-picker-width:           240px;
+
+
+
+//== Favorite Projects
+//
+//##
+$fav-title-color:             $brand-primary;

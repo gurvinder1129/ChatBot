@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	span.active{
+		background: red;
+	}
+</style>
+<body>
+	<link rel="stylesheet" href="../ceb/vendor/bootstrap-3.3.5/bootstrap.css">
+
+	<div class="row">	
+	 <ul id="pagination" style="display: none;"></ul>
+		<div class="col-xs-offset-4 col-xs-8">	
+				<span id="page2">
+				</span>
+				<hr>
+				<span id="page4">
+				</span>
+			</div>
+	</div>
+	<script src = "../ceb/vendor/jquery/jquery-2.0.3.js"></script>
+	<script src = "../ceb/vendor/jquery/jquery-ui-1.12.0.js"></script>
+	
+	<script type="text/javascript" src="../script/ceb.jqueryui.pagination.js"></script>
+	<script>
+	$(document).ready(function() {
+		'use strict';
+    //     	$("#page2").cebpagination({
+    //     		perPage:10,
+				// totalResult:150,
+    //         	selectionCallback:callBack,
+    //         	maxNumberDispaly:5 //option Parameter default (5)
+    //     	});
+		  //    function callBack(event){
+		  //        console.log('callBack calling');
+		  //   }
+		     $("#page4").cebpagination({
+        		perPage:10,
+				totalResult:100,
+            	selectionCallback:callBack,
+            	maxNumberDispaly:5 //option Parameter default (5)
+        	});
+		     function callBack(event){
+		     	// console.log($(this)[0])
+		     	console.log($(this).children().filter('a').attr('title'))
+		    }
+	});
+</script>
+	
+</body>
+</html>

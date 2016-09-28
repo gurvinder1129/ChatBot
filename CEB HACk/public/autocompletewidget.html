@@ -1,0 +1,74 @@
+<!-- <!doctype html> -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Volume Recruitement UI Assets Page</title>
+    <meta name="description" content="All Bootstrap's components in one page. Briefly presented with their own CSS selectors.">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  	<link rel="stylesheet" href="../ceb/vendor/bootstrap-3.3.5/bootstrap.css">
+</head>
+<body>
+
+
+
+<h3>Auto Complete CEB get Company</h3>
+<input id="autocompleteceb">
+<hr>
+<h3>Auto Complete CEB get Skill</h3>
+<input id="autocompleteceb2">
+
+<h3>Auto Complete CEB Ajax Call</h3>
+<input id="autocompleteceb3">
+
+<script src = "../ceb/vendor/jquery/jquery-2.0.3.js"></script>
+<script src = "../ceb/vendor/jquery/jquery-ui-1.10.4.custom.js"></script>
+<script src = "../ceb/vendor/bootstrap-3.3.5/bootstrap.js"></script>
+
+<script src="../script/cebautocomplete.js"></script>
+
+<script>
+
+
+
+$(document).ready(function($) {
+
+	$( "#autocompleteceb" ).cebautocomplete({
+      // datafrom:'autocompletedata',
+      getData:getCompany
+  });
+  $( "#autocompleteceb2" ).cebautocomplete({
+      // datafrom:'autocompletedata2',  
+      getData:getSkill
+  });
+  $( "#autocompleteceb3" ).cebautocomplete({
+      // datafrom:'autocompletedata2',  
+      getData:Ajax
+  });
+  
+
+});
+
+function Ajax(){
+  var data
+  $.ajax({
+    url: '/name',
+    success:function(data) {
+      data =data
+    }
+  })
+  console.log('data ' , data);
+  return data
+}
+
+function getCompany(){
+  return ([ "IBM", "CISCO", "CTS", "CEB", "DELL", "INTELL", "REGUS" ]);
+}
+
+
+function getSkill(){
+  return ([ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ]);
+}
+
+</script>
+</body>
+</html>

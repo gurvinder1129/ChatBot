@@ -1,0 +1,121 @@
+<!-- <!doctype html> -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Volume Recruitement UI Assets Page</title>
+    <meta name="description" content="All Bootstrap's components in one page. Briefly presented with their own CSS selectors.">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  	<link rel="stylesheet" href="../ceb/vendor/bootstrap-3.3.5/bootstrap.css">
+    <link rel="stylesheet" src = "../PlaceholderFinal/PlaceHolder.css">
+</head>
+   <body>
+   <div id="firstdiv">
+   <span id="firstspan"> </span>
+   </div>
+   
+   <div id="seconddiv">
+   <span id="secondspan"> </span>
+   </div>
+   
+   <div id="thirddiv">
+   <span id="thirdspan"> </span>
+   </div>
+   </body>
+
+
+<div class="ui-widget">
+  <label for="tags">Tags: </label>
+  <input id="tags">
+</div>
+<center> <div id="project"></div> </center>
+<script src = "../ceb/vendor/jquery/jquery-2.0.3.js"></script>
+<script src = "../ceb/vendor/jquery/jquery-ui-1.10.4.custom.js"></script>
+
+<script src = "../PlaceholderFinal/ucPlaceHolder.js"></script>
+<script>
+$(document).ready(function(){
+
+
+});
+ function callMe  (key){
+    $("#firstdiv").PlaceHolder({
+      key: key, // Kansas, Java, software development
+      type:"city", // city, Skill, Category
+      spanId: "firstspan",
+      value: "Kan",
+      selectionChange: removeSelection  
+    });
+ }
+function removeSelection(){
+alert("You are removing it from selection");
+}
+
+</script>
+
+
+
+ <script>
+  $( function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    // availableTags= [
+    //               { label: "India", value: "IND" },
+    //               { label: "Australia", value: "AUS" },
+    //               { label: "Gupta", value: "Rahul" }
+    //            ];
+    $( "#tags" ).autocomplete({
+      source: availableTags,
+      // source: "/jqueryui/search.php",
+      delay:500,   
+      minLength: 1,
+      // focus: function( event, ui ) {
+      //     console.log('ui', ui);
+      //     console.log('event', event);
+      //   // $( "#project" ).val( ui.item.label );
+      //   // return false;
+      // },
+      // autoFocus:true,
+      // focus: function( event, ui ) {
+      //      $( "#project" ).val( ui.item.label );
+      //         return false;
+      //      },
+      select: function( event, ui ) {
+        key=ui.item.value;
+          // console.log('ui', );
+        // callMe();
+        callMe(key);
+        // $( "#project" ).val( ui.item.label );
+        // $( "#project-id" ).val( ui.item.value );
+        // $( "#project-description" ).html( ui.item.desc );
+        // $( "#project-icon" ).attr( "src", "images/" + ui.item.icon );
+ 
+        return false;
+      }
+    });
+  } );
+  </script>
+
+</body>
+</html>

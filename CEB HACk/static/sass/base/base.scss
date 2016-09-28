@@ -1,0 +1,25 @@
+// Bootstrap
+@import "bootstrap-3.2.0/bootstrap.scss"; //Glyphicons is removed from bootstrap
+
+// Mixins
+@import "mixins/mixins.scss"; //Buttons mixins
+
+// Components
+@import "components/components.scss"; //Components
+
+// Plugins
+@import "plugins/plugins.scss"; //Plugins
+
+// Widgets
+@import "widgets/widgets.scss"; //Conference Accordion
+
+// Sections
+@import "sections/sections.scss"; //Sections
+
+// Pages
+@import "pages/pages.scss"; //Pages
+
+// Others
+@import "others/others.scss"; //Pages
+
+

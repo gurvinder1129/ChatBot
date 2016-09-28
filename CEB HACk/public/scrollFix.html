@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src = "../ceb/vendor/jquery/jquery-2.0.3.js"></script>
+	<style>
+		body { margin: 0; }
+
+
+
+		.sticky { background: orange; }
+
+		.fixed {
+		position: fixed;
+		top:0; left:0;
+		width: 100%;
+		 }
+	</style>
+</head>
+<body>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis officiis modi consequuntur necessitatibus pariatur possimus, nemo quisquam distinctio ipsam fugiat ipsa blanditiis ratione delectus minima odit quam id libero architecto.
+
+<hr>	
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis officiis modi consequuntur necessitatibus pariatur possimus, nemo quisquam distinctio ipsam fugiat ipsa blanditiis ratione delectus minima odit quam id libero architecto.
+  <div class="sticky">This div will stick to the top</div>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam nesciunt mollitia assumenda veritatis nam aliquam quidem aperiam culpa. Blanditiis aut earum aliquid natus in dolor, deleniti, eveniet minus maiores velit ad quis totam nobis at libero, id repellat! Quos fugit vel adipisci neque facilis alias aliquam voluptate unde ut dicta deleniti odit aliquid facere suscipit, nihil quibusdam blanditiis nam tempora ea ipsum velit, labore autem quod deserunt. Eos itaque soluta dicta aspernatur labore, excepturi obcaecati, quis culpa iste. Explicabo maiores, et voluptate, sapiente autem delectus perspiciatis fugiat. Consequatur dignissimos distinctio, et aliquam, quo laboriosam reprehenderit! Iusto qui omnis, vitae nesciunt, sit voluptate impedit animi maiores ex unde quae reprehenderit repellendus nulla praesentium sunt. Delectus tenetur alias aliquam accusantium optio, deleniti libero iusto consequatur tempore dolorum aut. Doloribus perspiciatis molestiae reiciendis temporibus dolores, odio neque consectetur unde minima aut atque enim sequi officiis nesciunt, eligendi minus error explicabo. Cum unde quis in, soluta iste nesciunt ea ullam doloremque. Dolorem nesciunt, dolorum molestiae consequatur esse eos, earum fuga quo alias autem natus quaerat blanditiis a, possimus, exercitationem dolores praesentium vel numquam. In consectetur repellendus vero quibusdam vel, alias, excepturi et quisquam tempora cupiditate deleniti obcaecati magnam! Nobis dolores placeat mollitia at natus delectus, vel, rem quod deserunt debitis architecto quaerat alias eum neque inventore quasi? Magni, consequuntur. Nihil numquam architecto natus totam delectus sequi. Consequatur nihil, aliquid esse nesciunt, odit nulla laborum nostrum fugiat corrupti. Unde, mollitia obcaecati hic esse numquam? Facere minima libero sapiente quo tempore, dolorum vero itaque tempora nobis aliquid, deserunt corporis, amet officiis, laudantium obcaecati harum distinctio. Modi odit eligendi ipsam, magni. Reprehenderit voluptas magnam asperiores enim, qui, delectus quam debitis quis recusandae rerum perferendis eos, nemo cum praesentium vitae assumenda eaque porro laboriosam esse. Repudiandae laborum cum blanditiis tempora minus! Rem soluta unde ipsum, asperiores sunt?
+<script>
+var stickyOffset = $('.sticky').offset().top;
+
+$(window).scroll(function(){
+  var sticky = $('.sticky'),
+      scroll = $(window).scrollTop();
+    
+  if (scroll >= stickyOffset) sticky.addClass('fixed');
+  else sticky.removeClass('fixed');
+});
+</script>
+</body>
+</html>

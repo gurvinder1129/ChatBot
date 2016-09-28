@@ -1,0 +1,22 @@
+//
+// Popover
+// --------------------------------------------------
+.popover-lg{
+	min-width:400px;
+	max-width:650px;
+
+	&.top > .arrow {
+	    bottom: -$popover-arrow-outer-width !important;
+	}
+  	&.right > .arrow {
+    	left: -$popover-arrow-outer-width !important;
+  	}
+  	&.bottom > .arrow {
+    	top: -$popover-arrow-outer-width !important;
+  	}
+
+  	&.left > .arrow {
+    	right: -$popover-arrow-outer-width !important;
+  	}
+
+}

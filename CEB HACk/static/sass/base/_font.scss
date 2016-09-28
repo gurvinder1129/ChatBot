@@ -1,0 +1,336 @@
+// Fonts & Icons
+/*---------Proxima Nova------------*/
+@font-face {
+    font-family: 'Proxima Nova Light';
+    src: url('../../fonts/Proxima Nova/Proxima Nova Light/proximanova-light-webfont.eot');
+    src: url('../../fonts/Proxima Nova/Proxima Nova Light/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/Proxima Nova/Proxima Nova Light/proximanova-light-webfont.woff') format('woff'),
+         url('../../fonts/Proxima Nova/Proxima Nova Light/proximanova-light-webfont.ttf') format('truetype'),
+         url('../../fonts/Proxima Nova/Proxima Nova Light/proximanova-light-webfont.svg#proxima_novalight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Proxima Nova Regular';
+    src: url('../../fonts/Proxima Nova/Proxima Nova Regular/proximanova-regular-webfont.eot');
+    src: url('../../fonts/Proxima Nova/Proxima Nova Regular/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/Proxima Nova/Proxima Nova Regular/proximanova-regular-webfont.woff') format('woff'),
+         url('../../fonts/Proxima Nova/Proxima Nova Regular/proximanova-regular-webfont.ttf') format('truetype'),
+         url('../../fonts/Proxima Nova/Proxima Nova Regular/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Proxima Nova SemiBold';
+    src: url('../../fonts/Proxima Nova/Proxima Nova SemiBold/proximanova-semibold-webfont.eot');
+    src: url('../../fonts/Proxima Nova/Proxima Nova SemiBold/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/Proxima Nova/Proxima Nova SemiBold/proximanova-semibold-webfont.woff') format('woff'),
+         url('../../fonts/Proxima Nova/Proxima Nova SemiBold/proximanova-semibold-webfont.ttf') format('truetype'),
+         url('../../fonts/Proxima Nova/Proxima Nova SemiBold/proximanova-semibold-webfont.svg#proxima_novasemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url('../../fonts/Proxima Nova/Proxima Nova Bold/proximanova-bold-webfont.eot');
+    src: url('../../fonts/Proxima Nova/Proxima Nova Bold/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/Proxima Nova/Proxima Nova Bold/proximanova-bold-webfont.woff') format('woff'),
+         url('../../fonts/Proxima Nova/Proxima Nova Bold/proximanova-bold-webfont.ttf') format('truetype'),
+         url('../../fonts/Proxima Nova/Proxima Nova Bold/proximanova-bold-webfont.svg#proxima_novasemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*----------SHLOnline-------------*/
+@font-face {
+  font-family: 'shl-icon-font';
+  src: url('../../fonts/shl-icon-font/shl-icon-font.eot');
+  src: url('../../fonts/shl-icon-font/shl-icon-font.eot?#iefixbqtmq8') format('embedded-opentype'), 
+       url('../../fonts/shl-icon-font/shl-icon-font.woff?bqtmq8') format('woff'), 
+       url('../../fonts/shl-icon-font/shl-icon-font.ttf?bqtmq8') format('truetype'), 
+       url('../../fonts/shl-icon-font/shl-icon-font.svg?bqtmq8#shl-icon-font') format('svg');
+}
+
+[class^="shl-"], [class*=" shl-"] {
+    font-family: 'shl-icon-font';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    *margin-bottom: -.25em;
+    *margin-right: .25em;
+}
+
+[class^="shl-"]:before,
+[class*=" shl-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+/* makes the font 33% larger relative to the icon container */
+.icon-large:before {
+  vertical-align: -10%;
+  font-size: 1.3333333333333333em;
+}
+/* makes sure icons active on rollover in links */
+a [class^="shl-"],
+a [class*=" shl-"] {
+  display: inline;
+}
+/* increased font size for icon-large */
+[class^="shl-"].icon-fixed-width,
+[class*=" shl-"].icon-fixed-width {
+  display: inline-block;
+  width: 1.1428571428571428em;
+  text-align: right;
+  padding-right: 0.2857142857142857em;
+}
+[class^="shl-"].icon-fixed-width.icon-large,
+[class*=" shl-"].icon-fixed-width.icon-large {
+  width: 1.4285714285714286em;
+}
+[class^="shl-"].hide,
+[class*=" shl-"].hide {
+  display: none;
+}
+
+.shl-icon_view:before {
+    content: "\e600";
+}
+.shl-icon_user_group:before {
+    content: "\e601";
+}
+.shl-icon_user:before {
+    content: "\e602";
+}
+.shl-icon_timer:before {
+    content: "\e603";
+}
+.shl-icon_time:before {
+    content: "\e604";
+}
+.shl-icon_tick:before {
+    content: "\e605";
+}
+.shl-icon_tasks:before {
+    content: "\e606";
+}
+.shl-icon_success:before {
+    content: "\e607";
+}
+.shl-icon_starred:before {
+    content: "\e608";
+}
+.shl-icon_settings:before {
+    content: "\e609";
+}
+.shl-icon_search:before {
+    content: "\e60a";
+}
+.shl-icon_review:before {
+    content: "\e60b";
+}
+.shl-icon_results:before {
+    content: "\e60c";
+}
+.shl-icon_resend:before {
+    content: "\e60d";
+}
+.shl-icon_reports:before {
+    content: "\e60e";
+}
+.shl-icon_reminder:before {
+    content: "\e60f";
+}
+.shl-icon_published_project:before {
+    content: "\e610";
+}
+.shl-icon_projects:before {
+    content: "\e611";
+}
+.shl-icon_printer:before {
+    content: "\e612";
+}
+.shl-icon_pie_chart:before {
+    content: "\e613";
+}
+.shl-icon_paper_and_pen:before {
+    content: "\e614";
+}
+.shl-icon_package:before {
+    content: "\e615";
+}
+.shl-icon_notifications:before {
+    content: "\e616";
+}
+.shl-icon_not_starred:before {
+    content: "\e617";
+}
+.shl-icon_mouse:before {
+    content: "\e618";
+}
+.shl-icon_menu:before {
+    content: "\e619";
+}
+.shl-icon_marker:before {
+    content: "\e61a";
+}
+.shl-icon_manage:before {
+    content: "\e61b";
+}
+.shl-icon_logout:before {
+    content: "\e61c";
+}
+.shl-icon_link_single_use:before {
+    content: "\e61d";
+}
+.shl-icon_link_multi_use:before {
+    content: "\e61e";
+}
+.shl-icon_link:before {
+    content: "\e61f";
+}
+.shl-icon_keyboard:before {
+    content: "\e620";
+}
+.shl-icon_job_match_wizard:before {
+    content: "\e621";
+}
+.shl-icon_information:before {
+    content: "\e622";
+}
+.shl-icon_home:before {
+    content: "\e623";
+}
+.shl-icon_help:before {
+    content: "\e624";
+}
+.shl-icon_favourite_project:before {
+    content: "\e625";
+}
+.shl-icon_error:before {
+    content: "\e626";
+}
+.shl-icon_email:before {
+    content: "\e627";
+}
+.shl-icon_edit:before {
+    content: "\e628";
+}
+.shl-icon_duplicate:before {
+    content: "\e629";
+}
+.shl-icon_draft_project:before {
+    content: "\e62a";
+}
+.shl-icon_delete:before {
+    content: "\e62b";
+}
+.shl-icon_dashboard:before {
+    content: "\e62c";
+}
+.shl-icon_create:before {
+    content: "\e62d";
+}
+.shl-icon_copy_to_project:before {
+    content: "\e62e";
+}
+.shl-icon_contact:before {
+    content: "\e62f";
+}
+.shl-icon_comparison:before {
+    content: "\e630";
+}
+.shl-icon_candidate_rejected:before {
+    content: "\e631";
+}
+.shl-icon_candidate_hired:before {
+    content: "\e632";
+}
+.shl-icon_candidate:before {
+    content: "\e633";
+}
+.shl-icon_calendar:before {
+    content: "\e634";
+}
+.shl-icon_calculator:before {
+    content: "\e635";
+}
+.shl-icon_audio:before {
+    content: "\e636";
+}
+.shl-icon_assessment_sent:before {
+    content: "\e637";
+}
+.shl-icon_assessment_profile:before {
+    content: "\e638";
+}
+.shl-icon_assessment_not_sent:before {
+    content: "\e639";
+}
+.shl-icon_assessment_multilingual:before {
+    content: "\e63a";
+}
+.shl-icon_assessment_invalid:before {
+    content: "\e63b";
+}
+.shl-icon_assessment_in_progress:before {
+    content: "\e63c";
+}
+.shl-icon_assessment_completed:before {
+    content: "\e63d";
+}
+.shl-icon_assessment_catalogue:before {
+    content: "\e63e";
+}
+.shl-icon_assessment:before {
+    content: "\e63f";
+}
+.shl-icon_arrow_up:before {
+    content: "\e640";
+}
+.shl-icon_arrow_small_up:before {
+    content: "\e641";
+}
+.shl-icon_arrow_small_right:before {
+    content: "\e642";
+}
+.shl-icon_arrow_small_left:before {
+    content: "\e643";
+}
+.shl-icon_arrow_small_down:before {
+    content: "\e644";
+}
+.shl-icon_arrow_right:before {
+    content: "\e645";
+}
+.shl-icon_arrow_left:before {
+    content: "\e646";
+}
+.shl-icon_arrow_down:before {
+    content: "\e647";
+}
+.shl-icon_arrow_circle_up:before {
+    content: "\e648";
+}
+.shl-icon_arrow_circle_right:before {
+    content: "\e649";
+}
+.shl-icon_arrow_circle_left:before {
+    content: "\e64a";
+}
+.shl-icon_arrow_circle_down:before {
+    content: "\e64b";
+}
+.shl-icon_add:before {
+    content: "\e64c";
+}
+

@@ -1,0 +1,30 @@
+//
+// Conference
+// --------------------------------------------------
+
+// Section: TC Favorite Projects
+.tc-clean-panel {
+	margin-bottom: 10px;
+	position: relative;
+	.panel-heading {
+		padding: 4px 10px;
+		/*background: $tc-favorite-projects-panel-bg;*/
+	}
+	.panel-body {
+		padding: 7px;
+		.description-value {font-size: 220%;}
+		.description-label {color: $text-color}
+		.jqInfoBlock a {
+			&:hover, &:active {text-decoration: none;}
+		}
+	
+	}
+}
+
+#dash-container {
+	height: 350px;
+	overflow: hidden;
+	.tc-clean-panel {height: 170px;}
+}
+
+.scroller-controls .btn-blank {font-size: 120%}

@@ -1,0 +1,32 @@
+  .menu {
+  	 color: $gemini-menu-color;
+  	 background-color: $gemini-menu-background-color;
+  	.pull-left{
+	  	&.active{
+	  		font-size: $gemini-menu-active-size;
+	  		text-decoration: underline;
+			// border-bottom: solid 3px $gemini-menu-color;
+			// display: inline;
+			// padding-bottom: 0px;
+	  	}
+  	}
+  	.pull-right{
+  		&.menuother{
+  			// margin-top: 10px;
+  		}
+	    font-size: $gemini-menu-size;
+	   
+	    a {
+	      color: $gemini-menu-link;
+	    &:visited {
+	      color: $gemini-menu-visit;
+	    }
+	    &:hover {
+	      color: $gemini-menu-hover;   
+	    }
+	    &:active {
+	      color: $gemini-menu-active;
+	    }
+  	}
+  }
+  }

@@ -1,0 +1,59 @@
+<html>
+<head>
+      <meta http-equiv = "Content-Type" content = "text/html; charset = utf-8" />
+ 
+      <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+		<link rel="stylesheet" href="PlaceHolder.css" type="text/css" >
+      <script type = "text/javascript" src="ucPlaceHolder.js"></script>
+<script>
+$(document).ready(function(){
+	$("#firstdiv").PlaceHolder
+	({
+		key: "Kansas", // Kansas, Java, software development
+		type:"city", // city, Skill, Category
+		spanId: "firstspan",
+		value: "Kan",
+        selectionChange: removeSelection	
+    });
+	$("#seconddiv").PlaceHolder
+	({
+		key: "Java", // Kansas, Java, software development
+		type:"Skill", // city, Skill, Category
+		spanId: "secondspan",
+		value: "Jav",
+        selectionChange: removeSelection	
+    });
+	$("#thirddiv").PlaceHolder
+	({
+		key: "- software development", // Kansas, Java, software development
+		type:"Category", // city, Skill, Category
+		spanId: "thirdspan",
+		value: "SD",
+        selectionChange: removeSelection	
+    });
+});
+
+function removeSelection(){
+alert("You are removing it from selection");
+}
+
+</script>
+      <style>
+      </style>
+   </head>
+	
+   <body>
+   <div id="firstdiv">
+   <span id="firstspan"> </span>
+   </div>
+   
+   <div id="seconddiv">
+   <span id="secondspan"> </span>
+   </div>
+   
+   <div id="thirddiv">
+   <span id="thirdspan"> </span>
+   </div>
+   </body>
+</html>

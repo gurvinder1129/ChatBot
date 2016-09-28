@@ -1,0 +1,42 @@
+//
+// Forms
+// --------------------------------------------------
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-line-button{
+    margin-top:24px;
+}
+
+.form-line-control{
+    margin-top:24px;
+}
+
+.input-group-btn{
+    [class^="shl-"], [class*=" shl-"]{
+        color: $brand-primary;
+    }
+    
+}
+
+.form-control-label{
+	@extend label;
+}
+
+.form-inline-label{
+    margin-top:8px;
+}
+
+.help-block{
+    color: $help-block-color;
+}
+
+.form-control-inline-icon{
+	@extend .form-control-feedback;
+    
+    color: $brand-primary;
+    margin-top:9px; 
+    
+}
+

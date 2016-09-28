@@ -1,0 +1,53 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+.logo{
+  /*width: 80%;*/
+  height:90%;
+}
+.userlogo{
+    height:20px;
+
+}
+
+.navbar-rightTop {
+    float: right;
+}
+.nav.navbar-nav.navbar-rightTop ul {
+    float: right;
+}
+.nav.navbar-nav.navbar-rightTop li {
+    float: left;
+}
+.navbar-toggle {
+    float: right;
+}
+/*.navbar-toggle{
+  float:none;
+}*/
+@media all and (max-width:767px) {
+    .navbar-header {
+        float: left;
+    }
+    
+    .navbar-collapse {
+        clear: both;
+        float: none;
+    }
+}
+
+.nav.navbar-nav.navbar-rightTop li {
+    float: none;
+}

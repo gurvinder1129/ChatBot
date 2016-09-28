@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Volume Recruitement UI Assets Page</title>
+    <meta name="description" content="All Bootstrap's components in one page. Briefly presented with their own CSS selectors.">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  	<link rel="stylesheet" href="../ceb/vendor/bootstrap-3.3.5/bootstrap.css">
+  <style>
+#container {
+    height: 500px; 
+    min-width: 310px; 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+.loading {
+    margin-top: 10em;
+    text-align: center;
+    color: gray;
+}
+
+  </style>
+</head>
+<body>
+
+
+
+<script src = "../ceb/vendor/jquery/jquery-2.0.3.js"></script>
+
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/maps/modules/data.js"></script>
+<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+
+
+<!-- <script src="../maps/mapdata/countries/us/us-small.js"></script> -->
+<script src="../maps/mapdata/countries/us/india.js"></script>
+<h1>India</h1>
+<div id="container"></div>
+
+
+<script>
+$(function () {
+
+	var mapData=Highcharts.maps['countries/in/custom/in-all-disputed']
+
+    // Prepare demo data
+    var data = [
+
+        {
+            "hc-key": "in-mz",
+            "value": 1
+        },
+        {
+            "hc-key": "in-as",
+            "value": 7
+        },
+        {
+            "hc-key": "in-up",
+            "value": 29
+        }
+    ];
+
+    // Initiate the chart
+    $('#container').highcharts('Map', {
+
+        title : {
+            text : 'Highmaps basic demo'
+        },
+
+        subtitle : {
+            text : 'Source map: <a href="http://code.highcharts.com/mapdata/countries/in/custom/in-all-disputed.js">India with disputed territories</a>'
+        },
+
+        mapNavigation: {
+            enabled: true,
+            buttonOptions: {
+                verticalAlign: 'bottom'
+            }
+        },
+
+        colorAxis: {
+            min: 0
+        },
+
+        series : [{
+            data : data,
+            mapData: mapData,
+            joinBy: 'hc-key',
+            name: 'Random data',
+            states: {
+                hover: {
+                    color: '#BADA55'
+                }
+            },
+            dataLabels: {
+                enabled: true,
+                formatter: function() {
+                    if(this.point.options["hide-name"])
+                        return;
+                    return this.point.name;
+                }
+            }
+        }]
+    });
+    
+    console.log($('#container').highcharts());
+});
+
+</script>
+</body>
+</html>

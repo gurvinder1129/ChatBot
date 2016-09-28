@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cebwidget.html</title>
+</head>
+<body>
+<div class="cebwidget"	widget-name="TopNavWidget" widget-type="TopNavWidget" 	data-bind-version="2">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+
+	
+	<!-- -->
+		
+	</script>
+	<!-- This is the source path to the widgets javascript -->
+
+	<div class="widget-model">
+	<nav class="firstnav navbar navbar-default border-remove" role="navigation">
+	    <div class="container-fluid">
+	    <div class="innercnt">
+	        <!-- Title -->
+	        <div class="navbar-header">
+	           <a class="navbar-brand" href="/">
+	                <span>
+	                    <img class="logo" src="images/ceblogo.png"/>
+	                </span>
+	                <div class="logo-text">
+	                    TalentNeuron
+	                </div>
+	            </a>
+	        </div>
+	        <div class="navbar-header pull-right">
+	            <ul class="nav pull-left">
+	                <li class="dropdown">
+	                    <a  aria-expanded="false" aria-haspopup="true" class="dropdown-toggle logolink" data-toggle="dropdown" href="#" role="button">
+	                        <div class="left">
+	                              <img alt="" class="userlogo " src="images/ceb_user.png"/>
+	                        </div>
+	                        <div class="left">
+	                            <div>
+	                                <span class="username">
+	                                    Annie Smith
+	                                </span>
+	                                <span class="caret">
+	                                </span>
+	                            </div>
+	                            <div class="role">
+		                            	Software Engineer
+	                            </div>
+	                        </div>
+	                    </a>
+	                    <ul class="dropdown-menu usersetting">
+	                        <li>
+	                            <a href="#">
+	                                My Profile
+	                            </a>
+	                        </li>
+	                        <li>
+	                            <a href="#">
+	                                User Settings
+	                            </a>
+	                        </li>
+	                        <li>
+	                            <a href="#">
+	                                Help Center
+	                            </a>
+	                        </li>
+	                        <li>
+	                            <a href="#">
+	                                Log Out
+	                            </a>
+	                        </li>
+	                    </ul>
+	                </li>
+	            </ul>
+	            <!-- Required bootstrap placeholder for the collapsed menu -->
+	            <button class="navbar-toggle" data-target="#navbar" data-toggle="collapse" type="button">
+	                <span class="sr-only">
+	                    Toggle navigation
+	                </span>
+	                <span class="icon-bar"><jsp:text />
+	                </span>
+	                <span class="icon-bar"><jsp:text />
+	                </span>
+	                <span class="icon-bar"><jsp:text />
+	                </span>
+	            </button>
+	        </div>
+	        <div class="navbar-collapse collapse navbar-right" id="navbar">
+	            <ul class="nav navbar-nav top-nav-menu">            
+	                <li data-bind-iterate=".">
+	                    <a href="#" data-bind="title">&#160;</a>
+	                </li>
+	            </ul>
+	        </div>
+	        </div>
+	    </div>
+	</nav>
+	</div>
+</div>
+	<script src = "../ceb/vendor/modernizr/modernizr-latest.js" type = "text/javascript"></script>
+	<script src = "../ceb/vendor/jquery/jquery-2.0.3.js"></script>
+	<script src = "../ceb/vendor/jquery/jquery-ui-1.10.4.custom.js"></script>
+	<script src = "../ceb/vendor/bootstrap-3.3.5/bootstrap.js"></script>
+	
+	<script src = "../framework/cebdropdown.js" type = "text/javascript"></script>
+	<script src = "../script/app.js"></script>	
+	<script src = "../framework/framework.js" type = "text/javascript"></script>
+	<script src = "../script/colorize.js"></script>	
+	<script src = "../script/topnav.js"></script>			
+
+</body>
+</html>

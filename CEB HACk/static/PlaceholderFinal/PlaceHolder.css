@@ -1,0 +1,50 @@
+﻿div.rectangleRadius
+{
+    background: none repeat scroll 0 0 white;    
+    float: left;
+    height: 10px;
+    margin: 0;
+    min-width: 35px;
+    padding-left: 10px;
+    width: auto;
+}
+
+div.rectanglebox
+{
+    background: none repeat scroll 0 0 rgb(255, 255, 255);
+    border: 1px solid #F0EDF4;
+	border-radius: 15px;
+    padding: 3px;
+    /* box-shadow: -2px 2px 1px 0 #d0d0d0; */
+}
+
+span.placeHolderText
+{
+    color: #ff00bf !important;
+    font-size: 15px;
+    margin-left: 10px;
+	vertical-align:middle;
+}
+span.placeHolderExcludedText
+{
+    color: #4d4d4d !important;
+    font-size: 15px;
+    margin-left: 10px;
+	vertical-align:middle;
+}
+span.typeIcon
+{
+    background-position: 0 0;
+    margin-left: 5px;
+    vertical-align: bottom; 
+}
+
+span.removeIcon
+{
+    background-position: 0 0;
+    cursor: pointer;
+    margin-left: 20px;
+	margin-right: 5px;
+    vertical-align: middle;
+   
+}

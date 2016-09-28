@@ -1,0 +1,63 @@
+//
+// Navs
+// --------------------------------------------------
+
+
+// Base class
+// --------------------------------------------------
+
+.nav {
+    margin-bottom: 10px;
+    
+}
+
+
+// Tabs
+// -------------------------
+
+
+
+
+// Pills
+// -------------------------
+.nav-pills {
+    > li {
+        float: left;
+
+        // Links rendered as pills
+        > a {
+            border-radius: 0;
+            border: 1px solid $nav-pills-active-link-hover-bg;
+            border-left:none;
+        }
+        + li {
+            margin-left: 0px;
+        }
+
+        &:first-child{
+            > a {
+                border-left: 1px solid $nav-pills-active-link-hover-bg;
+                border-top-left-radius:$nav-pills-border-radius;
+                border-bottom-left-radius:$nav-pills-border-radius;
+            }
+        }
+
+        &:last-child{
+            > a {
+                border-top-right-radius:$nav-pills-border-radius;
+                border-bottom-right-radius:$nav-pills-border-radius;
+            }
+        }
+
+        // Active state
+        &.active > a {
+            &,
+            &:hover,
+            &:focus {
+                color: $nav-pills-active-link-hover-color;
+                background-color: $nav-pills-active-link-hover-bg;
+            }
+        }
+    }
+}
+

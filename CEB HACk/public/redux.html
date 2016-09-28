@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ReDux</title>
+</head>
+<body>
+	<input type="button" value="increment" id="increment">
+	<div id="renderincrement"></div>	
+	<hr>
+	<input type="button" value="asyncincrement" id="asyncincrement">
+	<div id="renderasyncincrement"></div>
+	<hr>
+	<input type="text" id="a">+<input type="text" id="b">=<input type="button" value="Sum" id="sum"> 
+	<div id="rendersum"></div>
+<script src = "../react/redux.js"></script>
+<script>
+	var increment=document.getElementById('increment')
+	var renderincrement =document.getElementById('renderincrement')
+	var asyncincrement =document.getElementById('asyncincrement')
+	var renderasyncincrement =document.getElementById('renderasyncincrement')
+	
+	
+	var sum =document.getElementById('sum')
+	var rendersum =document.getElementById('rendersum')
+	var counter=0;
+	var ayccounter=0;
+	increment.addEventListener("click", function (){
+
+		store.dispatch({type:'ADD'})
+	});
+
+	asyncincrement.addEventListener("click", function (){
+		setTimeout(function(){
+			renderasyncincrement.innerHTML =ayccounter;
+		},3000)
+		ayccounter++;
+	});
+	sum.addEventListener("click", function (){
+		var a =document.getElementById('a').value
+		var b =document.getElementById('b').value
+		store.dispatch({type:'SUM',a:a,b:b})
+	});
+	var store = Redux.createStore(reduser)
+
+	function reduser(cuurentState,action){
+
+		var DEFAULT_STATE={"count":0,"sum":0}
+
+		var nextState = Object.assign({},cuurentState);
+
+		if (cuurentState===undefined) {
+			nextState=DEFAULT_STATE;
+			console.log('nextState', nextState);
+			return nextState;
+		}
+		switch(action.type){
+
+			case 'DECRMENT':
+			return nextState;
+
+			case 'ADD':
+			nextState.count=cuurentState.count +1;
+			return nextState;
+
+			case 'SUM':
+			s1=parseInt(action.a, 10) +parseInt(action.b, 10);
+			nextState.sum=s1;
+			return nextState;
+			
+			default:
+			return nextState;
+		}
+	}
+	// store.dispatch({type:'add'})
+	store.subscribe(render)
+	render();
+	function render(){
+		// console.log('render');
+		rendersum.innerHTML =store.getState().sum;
+		renderincrement.innerHTML =store.getState().count;
+	}
+</script>
+</body>
+
+</html>

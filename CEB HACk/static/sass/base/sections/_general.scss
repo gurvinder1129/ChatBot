@@ -1,0 +1,29 @@
+//
+// General Layout
+// --------------------------------------------------
+
+//Layout
+html, body{
+	height:100%;
+}
+
+#body-wrapper{
+	min-height: 100%;
+	position: relative;
+}
+
+.container-fullwidth{
+    @extend .container-fluid;
+}
+
+.page-content{
+	padding: 20px 30px;
+}
+
+@media only screen and (max-width: $screen-sm) and (min-width: $screen-xs + 1){
+	padding: 15px 23px;
+}
+
+@media only screen and (max-width: $screen-xs){
+	padding: 10px 15px;
+}

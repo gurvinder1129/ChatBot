@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ie11 Test</title>
+</head>
+<body>
+	
+	<a class="win" href="#">Call Me</a>
+
+
+
+	<script src = "../ceb/vendor/jquery/jquery-2.0.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function($) {
+			$('.win').on('click',function(event) {
+				// window.open("https://www.google.co.uk/");
+				 window.open("https://www.google.co.uk/", "", "width=200, height=100");
+
+			})
+		});
+	</script>
+</body>
+</html>

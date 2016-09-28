@@ -1,0 +1,42 @@
+//
+// Favprojects
+// --------------------------------------------------
+#fav-item-list{
+	padding-left:15px;
+	padding-right:15px;
+
+	.fav-item{
+		display:none;
+	}
+}
+.fav-item{
+	border: 1px solid $border-color;
+	border-radius: $border-radius-base;
+	margin-bottom: 10px;
+}
+
+.fav-item-title{
+	margin-top:5px;
+	margin-bottom:10px;
+}
+.fav-item-header{
+	margin-top:0;
+	margin-bottom:0;
+
+	font-size: $font-size-h4;
+}
+
+.fav-close{
+	position:absolute;
+	top:0;
+	right:5px;
+}
+
+
+@media only screen and (max-width: $screen-xs){
+	.fav-project-option{
+		span{
+			display:block;
+		}
+	}
+}
